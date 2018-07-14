@@ -33,6 +33,10 @@ Simply download and;
 chmod a+x TrussTables.AppImage
 ./ TrussTables.AppImage
 ```
+Optionally, for desktop integration;
+```
+./ TrussTables.AppImage install
+```
 
 ## Motivation
 
