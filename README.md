@@ -24,7 +24,7 @@ Model analysis may include the following options:
 
 ## Installing
 
-Binaries are provided for Linux (AppImages) and Windows, see ...
+Binaries are provided for Linux ([AppImages](https://en.wikipedia.org/wiki/AppImage "AppImage")) and Windows, see ...
 
 ## Motivation
 
