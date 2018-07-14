@@ -70,4 +70,4 @@ Just me for now!
 
 ## License
 
-__TrussTables__ is licensed under the GPLv3 - see the (link to license file) for details.
+__TrussTables__ is licensed under the GPLv3 - see the [LICENSE](https://github.com/rembosa/TrussTables/blob/master/LICENSE) file for details.
