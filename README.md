@@ -25,3 +25,7 @@ Model analysis may include the following options:
 ## Installing
 
 Binaries are provided for Linux (AppImages) and Windows, see ...
+
+## Motivation
+
+...
