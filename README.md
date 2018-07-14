@@ -49,7 +49,7 @@ Optionally, for desktop integration;
   * Coding enthusiast
   * Anybody looking to solve truss problems!
 
-## Built WIth
+## Built With
 
 * [C++](https://en.wikipedia.org/wiki/C%2B%2B "C++ Wikipedia") - Code
 * [Qt framework](https://www.qt.io/ "Qt") - GUI Toolkit
@@ -57,3 +57,13 @@ Optionally, for desktop integration;
 * [oxygen-icons](https://github.com/KDE/oxygen-icons "oxygen-icons") - UI icons
 * [AppImage](https://en.wikipedia.org/wiki/AppImage "AppImage") - Packaging and deployment (Linux)
 * [NSIS](http://nsis.sourceforge.net/Main_Page "NSIS") - Install system (Windows)
+
+## Versioning
+
+TrussTables uses [Semver](https://semver.org/ "SemVer")
+
+## Authors
+
+Just me for now!
+
+* __Ambrose Louis Okune__ - initial work - [rembosa](https://github.com/rembosa)
