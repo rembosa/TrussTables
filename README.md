@@ -28,4 +28,11 @@ Binaries are provided for Linux (AppImages) and Windows, see ...
 
 ## Motivation
 
-...
+* [Finite element analysis](https://en.wikipedia.org/wiki/Finite_element_method "Finite element method")
+* [C++](https://en.wikipedia.org/wiki/C%2B%2B "C++ Wikipedia")
+* [Qt framework](https://www.qt.io/ "Qt")
+* Hopefully, a usefull tool to :
+  * Students
+  * Engineers
+  * Coding enthusiast
+  * Anybody looking to solve truss problems!
