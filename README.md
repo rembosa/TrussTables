@@ -29,8 +29,9 @@ Binaries are provided for Linux ([AppImage](https://en.wikipedia.org/wiki/AppIma
 **Note:**
 Linux AppImage executables are built on, tested and target, Linux mint 18.2 LTS and Ubuntu 16.04 LTS
 Simply download and;
-```chmod a+x TrussTables.AppImage
-   ./ TrussTables.AppImage
+```
+chmod a+x TrussTables.AppImage
+./ TrussTables.AppImage
 ```
 
 ## Motivation
