@@ -27,7 +27,7 @@ Model analysis may include the following options:
 Binaries are provided for Linux ([AppImage](https://en.wikipedia.org/wiki/AppImage "AppImage")) and Windows, see (link to releases)
 
 **Note:**
-Linux AppImage executables are built on, tested and target, Linux mint 18.2 LTS and Ubuntu 16.04 LTS
+Linux AppImage executables are built on, tested and target, Linux mint 18.2 LTS and Ubuntu 16.04 LTS.
 Simply download and;
 ```
 chmod a+x TrussTables.AppImage
