@@ -48,3 +48,12 @@ Optionally, for desktop integration;
   * Engineers
   * Coding enthusiast
   * Anybody looking to solve truss problems!
+
+## Built WIth
+
+* [C++](https://en.wikipedia.org/wiki/C%2B%2B "C++ Wikipedia") - Code
+* [Qt framework](https://www.qt.io/ "Qt") - GUI Toolkit
+* [GSL](https://www.gnu.org/software/gsl/ "GNU Scientific Library") - Numerical computation library
+* [oxygen-icons](https://github.com/KDE/oxygen-icons "oxygen-icons") - UI icons
+* [AppImage](https://en.wikipedia.org/wiki/AppImage "AppImage") - Packaging and deployment (Linux)
+* [NSIS](http://nsis.sourceforge.net/Main_Page "NSIS") - Install system (Windows)
