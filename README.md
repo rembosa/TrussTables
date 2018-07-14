@@ -67,3 +67,7 @@ TrussTables uses [Semver](https://semver.org/ "SemVer")
 Just me for now!
 
 * __Ambrose Louis Okune__ - initial work - [rembosa](https://github.com/rembosa)
+
+## License
+
+__TrussTables__ is licensed under the 
