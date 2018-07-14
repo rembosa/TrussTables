@@ -13,3 +13,11 @@ TrussTables features:
 * Model analysis options
 * Model analysis
 * Results view and export
+
+Model analysis may include the following options:
+
+* Joint/nodal loads
+* predescribed joint displacements
+* Thermal loads
+* Fabrication error loads
+* Influence lines
