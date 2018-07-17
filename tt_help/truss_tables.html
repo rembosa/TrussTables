@@ -1,0 +1,1114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>TrussTables Help</title>
+		<style>
+			table, th, td {
+			border: 2px solid black;
+			border-collapse: collapse;
+			padding: 5px;
+			}
+			th {
+			text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>TrussTables v0.1.0 Help</h1>
+		<a name="top"></a>
+		<hr />
+		<h2>CONTENTS</h2>
+		<ul>
+    			<li>
+        			<h3><a href="#intro">Introduction to TrussTables</a></h3>
+        			<ol>
+            				<li><a href="#intro_01">Main Features</a></li>
+            				<li><a href="#intro_02">Model Viewer</a></li>
+            				<li><a href="#intro_03">Selection Panel</a></li>
+            				<li><a href="#intro_04">Main Menu</a></li>
+        			</ol>
+    			</li>
+    			<li>
+        			<h3><a href="#model_input">Model Input</a></h3>
+        			<ol>
+            				<li><a href="#model_input_01">Joints</a></li>
+            				<li><a href="#model_input_02">Bars</a></li>
+            				<li><a href="#model_input_03">Supports</a></li>
+        			</ol>
+    			</li>
+    			<li>
+        			<h3><a href="#loads_input">Loads Input</a></h3>
+       				 <ol>
+					<li><a href="#loads_input_01">Model Checks</a></li>
+            				<li><a href="#loads_input_02">Joint Loads</a></li>
+            				<li><a href="#loads_input_03">Support Settlements</a></li>
+            				<li><a href="#loads_input_04">Thermal Effects</a></li>
+            				<li><a href="#loads_input_05">Assembly/Fabrication Errors</a></li>
+            				<li><a href="#loads_input_06">Influence Loads</a></li>
+        			</ol>
+    			</li>
+    			<li>
+        			<h3><a href="#analysis_results">Analysis and Results</a></h3>
+        			<ol>
+            				<li><a href="#analysis_results_01">Load Options</a></li>
+            				<li><a href="#analysis_results_02">Analysis</a></li>
+            				<li><a href="#analysis_results_03">Analysis Report</a></li>
+        			</ol>
+    			</li>
+		</ul>
+		<hr />
+		<h2 id="intro">Introduction to TrussTables</h2>
+		<ol>
+			<li>
+				<p id="intro_01"><b>Main Features</b></p>
+				<p>TrussTables is an application that performs linear static analysis of 2D/plane truss problems. 
+				The main features of the program are as follows:</p>
+				<ul>
+					<li>Option for selection of model units</li>
+					<li>Analysis of joint loads, support settlements, thermal effects, fabrication errors and influence loads</li>
+					<li>Reporting/export of analysis results</li>
+				</ul>
+			</li>
+			<p><a href="#top">Back to Top</a></p>
+			<li>
+				<p id="intro_02"><b>Model Viewer</b></p>
+				<p>The <i>Model Viewer</i> is the central part of the application main window, and displays the truss model. 
+				The display of the truss model will change/update as changes are made during the model input. 
+				The size of the <i>Model Viewer</i> area can be set via the menu command <b>Model</b> &#8594; <b>Model area</b>. 
+				Coordinate axes in the left bottom corner of the window can optionally be turned off by the command <b>Model</b> &#8594; 
+				<b>Show/Hide Axes</b>. 
+				The coordinates (in the currently set units) of the current cursor position is shown at the bottom right corner of the main window.</p>
+				<img src="images/fig_1.0.jpeg" alt="fig 1.0" style="width:1001px;height:538px;">
+			</li>
+			<p><a href="#top">Back to Top</a></p>
+			<li>
+				<p id="intro_03"><b>Selection Panel</b></p>
+				<p>The <i>Selection Panel</i> is a dockable window on the right side of the <i>Model Viewer</i>. The panel consists of five tabs:</p>
+				<ul>
+            				<li>Joints</li>
+            				<li>Bars</li>
+            				<li>Supports</li>
+            				<li>Loads</li>
+            				<li>Solution</li>
+				</ul>
+				<p>The first four tabs facilitate input of the model. The last tab is for model analysis and reporting. 
+				All the tabs have at the bottom, a table that gives a tabular representation of the model data corresponding to that tab. 
+				For the first four tabs, the tables also provide a means for selecting model parts i.e., joints, bars, suppors and loads for input, 
+				editing and deletion.</p>
+				<p><b>Joints</b></p>
+				<img src="images/fig_2.0.jpeg" alt="fig 2.0" style="width:337px;height:527px;">
+				<p>The <i>Joints</i> tab has two buttons labeled "Single" and "Multiple" respectively for choosing the selection mode of the 
+				<i>Joints</i> table. Single option for single selection and multiple option for multiple/extended selection. 
+				Below these is another button that when clicked, clears the current selection in the <i>Joints</i> table. 
+				Lastly are three buttons labeled "Add", "Edit" and "Delete". Each button, when clicked, will show a dialog. 
+				The <i>Add</i> button will display the <i>Add Joints</i> dialog, the <i>Edit</i> button will show the <i>Edit Joints</i> dialog, 
+				and the <i>Delete</i> button will show the <i>Delete Joints</i> dialog.</p>
+				<p><b>Bars</b></p>
+				<img src="images/fig_3.0.jpeg" alt="fig 3.0" style="width:337px;height:527px;">
+				<p>The <i>Bars</i> tab also has two buttons for choosing the selection mode of the <i>Bars</i> table. To the right are two buttons 
+				for choosing the axial rigidity option. Axial rigidity of the model bars can either be entered as factors/ratios or as actual values 
+				of the modulus of elasticity and cross-sectional area of each bar. Below is the <i>Clear Selection</i> button. Three buttons labeled 
+				"Add", "Edit" and "Delete" follow. These buttons perform similar functions as indicated above for the <i>Joints</i> tab.</p>
+				<p><b>Supports</b></p>
+				<img src="images/fig_4.0.jpeg" alt="fig 4.0" style="width:337px;height:527px;">
+				<p>The <i>Supports</i> tab has buttons similar in all respects to the <i>Joints</i> tab.</p>
+				<p><b>Loads</b></p>
+				<img src="images/fig_5.0.jpeg" alt="fig 5.0" style="width:518px;height:527px;">
+				<p>The <i>Loads</i> tab has at the top, a list window from which a selection can be made. The current load display option will 
+				determine the load type displayed in the <i>Model Viewer</i> and the <i>Loads</i> table. The self-weight option determines whether or 
+				not to show joint loads resulting from bar self-weight.<b>This option is only effective when bars are input with the "value" axial 
+				rigidity option.</b>. The <i>Add</i>, <i>Edit</i> and <i>Delete</i> buttons perform similar functions as already stated above. 
+				The displayed dialog depends on the currently selected load type option.</p>
+				<p><b>Solution</b></p>
+				<img src="images/fig_6.0.jpeg" alt="fig 6.0" style="width:552px;height:527px;">
+				<p>The <i>Solution</i> tab is where the model is analyzed and an analysis report generated. The analysis load options required are 
+				checked for the analysis. The <i>Solve</i> button will initiate an analysis. The <i>Clear</i> button clears and discards results from 
+				any completed model analysis. The <i>Report</i> button generates a complete analysis report. Solution display options allow the 
+				display of diffrent aspects of the analysis results in the <i>Model Viewer</i> and <i>Results</i> table. The influence load bar option 
+				selects the bar influence line to display, if the analysis includes influence loads.</p>
+				
+			</li>
+			<p><a href="#top">Back to Top</a></p>
+			<li>
+				<p id="intro_04"><b>Main Menu</b></p>
+				<p><u>File Menu</u></p>
+				<img src="images/fig_7.0.jpeg" alt="fig 7.0" style="width:273px;height:182px;">
+				<p><b>Commands:</b></p>
+				<p><i>New</i></p>
+				<p>Create a new model file</p>
+				<p><i>Open</i></p>
+				<p>Open an existing model file</p>
+				<p><i>Save</i></p>
+				<p>Save model file to disk</p>
+				<p><i>Save As</i></p>
+				<p>Save model file under a different name</p>
+				<p><i>Export Model Image</i></p>
+				<p>Export an image file of the <i>model viewer</i> image to disk</p>
+				<p><i>Exit</i></p>
+				<p>Exit the application</p>
+				<p>The <i>File</i> menu also contains entries for up to five recently used model files</p> 
+				<p><u>View Menu</u></p>
+				<img src="images/fig_8.0.jpeg" alt="fig 8.0" style="width:154px;height:52px;">
+				<p><b>Commands:</b></p>
+				<p><i>Selection Panel</i></p>
+				<p>Show the <i>Selection Panel</i>, if it was closed</p>
+				<p><i>Notes</i></p>
+				<p>Show the <i>Notes</i> window. The <i>Notes</i> window shows notifications regarding the state of the model, and analysis results.</p>
+				<img src="images/fig_9.0.jpeg" alt="fig 9.0" style="width:313px;height:207px;">
+				<p><u>Model Menu</u></p>
+				<img src="images/fig_10.0.jpeg" alt="fig 10.0" style="width:249px;height:208px;">
+				<p><b>Commands:</b></p>
+				<p><i>Units</i></p>
+				<p>Show the <i>Units</i> dialog. Here we enter a brief description of the model and select model units</p> 
+				<img src="images/fig_11.0.jpeg" alt="fig 11.0" style="width:496px;height:484px;">
+				<p><i>Model Area</i></p>
+				<p>Display the <i>Model Area</i> dialog. This allows setting the size of the <i>Model Viewer</i> window, 
+				and hence the displayed size of the truss model.</p>
+				<img src="images/fig_12.0.jpeg" alt="fig 12.0" style="width:256px;height:191px;">
+				<p>The width and height factors determine the width and height respectively of the <i>Model Viewer</i> area, 
+				in relation to the size of the visible area of the <i>Model Viewer</i> window. The margin setting determines the distance in screen 
+				pixels between the edge of the <i>Model Viewer</i> window and the coordinate axes.</p>
+				<img src="images/fig_13.0.jpg" alt="fig 13.0" style="width:398px;height:256px;">
+				<p><i>Show/Hide Axes</i></p>
+				<p>Display or hide the coordinate axes</p>
+				<p><i>Show/Hide Joint Number</i></p>
+				<p>Display or hide joint number labels</p>
+				<p><i>Show/Hide Bar Number</i></p>
+				<p>Display or hide bar number labels</p>
+				<p><i>Scale Forces</i></p>
+				<p>Show the <i>Scale Forces</i> dialog. This sets the scale that determines the length of load vector arrows.</p>
+				<img src="images/fig_14.0.jpeg" alt="fig 14.0" style="width:256px;height:131px;">
+				<p><i>Scale Deflections</i></p>
+				<p>Show the <i>Scale Deflections</i> dialog. This sets the scale for drawing the deflected shape of the model.<b>This setting is only 
+				effective when bars are input with the "value" axial rigidity option.</b>.</p>
+				<img src="images/fig_15.0.jpeg" alt="fig 15.0" style="width:283px;height:130px;">
+				<p><i>Check Model</i></p>
+				<p>Check the model for validity for analysis. Result of model check is displayed in the <i>Notes</i> dialog.</p>
+				<p><u>Help Menu</u></p>
+				<img src="images/fig_16.0.jpeg" alt="fig 16.0" style="width:233px;height:78px;">
+				<p><b>Commands:</b></p>
+				<p><i>Help</i></p>
+				<p>Show this help documentation</p>
+				<p><i>About TrussTables...</i></p>
+				<p>Show the <i>About TrussTables</i> dialog</p>
+				<p><i>About Qt...</i></p>
+				<p>Show the <i>About Qt</i> dialog</p>
+			</li>
+			<p><a href="#top">Back to Top</a></p>
+		</ol>
+		<h2 id="model_input">Model Input</h2>
+		<ol>
+			<li>
+				<p id="model_input_01"><b>Joints</b></p>
+				<p><u>Add Joints</u></p>
+				<p>To begin, select the desired model units in the <i>Units</i> dialog, and optionally enter a model description. 
+				Click the <i>Add</i> button of the <i>Joints</i> tab to show the <i>Add Joints</i> dialog.</p>
+				<img src="images/fig_17.0.jpeg" alt="fig 17.0" style="width:461px;height:272px;">
+				<p>The window on the left of the dialog labeled "Selected Joints" will list the current joints selection in the <i>Joints</i> table. 
+				Also, the dialog has two tabs labeled "Generate" and "Mirror".</p>
+				<p><i>Generate Joints</i></p>
+				<p>While in the <i>Generate</i> tab, add the first joint by clicking the <i>Apply</i> button of the dialog. 
+				The first joint will always be at the origin of the coordinate axes.</p>
+				<ol type="i">
+					<li>
+						<p>Generate without selection</p>
+						<p>Enter the following values and click <i>Apply</i>:</p>
+						<ul>
+							<li>x offset</li>
+							<li>y offset</li>
+							<li>Repeat count</li>
+						</ul>
+						<p>This will repeat the last entered joint as many times as is specified by the repeat count, 
+						at an interval given by the x and y offset values.</p>
+					</li>
+					<li>
+						<p>Generate with selection</p>
+						<p>Select joints as required</p>
+						<p>Enter the following values and click <i>Apply</i>:</p>
+						<ul>
+							<li>x offset</li>
+							<li>y offset</li>
+							<li>Repeat count</li>
+						</ul>
+						<p>This will repeat the selected joints as many times as is specified by the repeat count, at an interval given by the 
+						x and y offset values.</p>
+					</li>
+				</ol>
+				<p><i>Mirror Joints</i></p>
+				<img src="images/fig_18.0.jpeg" alt="fig 18.0" style="width:463px;height:272px;">
+				<p>In the <i>Mirror</i> tab selected joints are repeated by creating new joints "mirrored" about an axis (horizontal or vertical) 
+				through a joint. This option is useful for models that are symmetrical.</p> 
+				<p>Select joints as required</p>
+				<p>Make choices in the options below and click <i>Apply</i>:</p>
+				<ul>
+					<li>Mirror axis</li>
+					<li>Axis joint</li>
+				</ul>
+				<p><u>Edit Joints</u></p>
+				<p>Click the <i>Edit</i> button of the <i>Joints</i> tab to show the <i>Edit Joints</i> dialog.</p>
+				<img src="images/fig_19.0.jpeg" alt="fig 19.0" style="width:286px;height:187px;">
+				<p>The coordinates of the selected joints will be altered by the values of the x and y offsets.</p>
+        			<p><u>Delete Joints</u></p>
+				<p>Click the <i>Delete</i> button of the <i>Joints</i> tab to show the <i>Delete Joints</i> dialog.</p>
+				<img src="images/fig_20.0.jpeg" alt="fig 20.0" style="width:257px;height:166px;">
+				<p>The selected joints will be removed from the model.</p>
+			</li>
+			<p><u>Rules for Joint Input</u></p>
+			<table>
+				<tr>
+					<th>Command</th>
+					<th>Required Conditions</th>
+				</tr>
+				<tr>
+					<td>Set model units</td>
+					<td>No joints input</td>
+				</tr>
+				<tr>
+					<td>Add Joints</td>
+					<td>
+						<ul>
+							<li>No loads input</li>
+							<li>
+								Minimum separation from nearest existing joints
+								<ul>
+									<li>Metric system: 0.3 m</li>
+									<li>Imperial system: 1.0 ft</li>
+								</ul>
+							</li>
+							<li>
+								Maximum separation from furthest existing joints
+								<ul>
+									<li>Metric system: 1414.2 m</li>
+									<li>Imperial system: 4242.6 ft</li>
+								</ul>
+							</li>
+							<li>No joint intersection with existing bars</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Edit Joints</td>
+					<td>
+						<ul>
+							<li>No loads input</li>
+							<li>
+								Minimum separation from nearest existing joints
+								<ul>
+									<li>Metric system: 0.3 m</li>
+									<li>Imperial system: 1.0 ft</li>
+								</ul>
+							</li>
+							<li>
+								Maximum separation from furthest existing joints
+								<ul>
+									<li>Metric system: 1414.2 m</li>
+									<li>Imperial system: 4242.6 ft</li>
+								</ul>
+							</li>
+							<li>
+								Bar length limits
+								<ul>
+									<li>Metric system: 0.3 - 30.0 m</li>
+									<li>Imperial system: 1.0 - 100.0 ft</li>
+								</ul>
+							</li>
+							<li>No joint intersection with existing bars</li>
+							<li>No length overlap between any two existing bars</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Delete Joints</td>
+					<td>
+						<ul>
+							<li>No loads input</li>
+							<li>No connected joints</li>
+							<li>No attached bars</li>
+							<li>No attached supports</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<p><a href="#top">Back to Top</a></p>
+			<li>
+				<p id="model_input_02"><b>Bars</b></p>
+				<p><u>Add Bars</u></p>
+				<p>Select the desired axial rigidity option. For the "Factor" option, the axial rigidity of the bar is only entered as a factor. 
+				For the "Value" option, we enter the bar modulus of elasticity, the area of cross-section, and the material unit-weight.</p>
+				<p>Click the <i>Add</i> button of the <i>Bars</i> tab to show the <i>Add Bars</i> dialog.</p>
+				<img src="images/fig_21.0.jpeg" alt="fig 21.0" style="width:390px;height:513px;">
+				<p>The dialog has three tabs labeled "Generate", "Mirror" and "Link".</p>
+				<p><i>Generate Bars</i></p>
+				<ol type="i">
+					<li>
+						<p>Generate without selection</p>
+						<p>Make selections in the options below, for the bar end joints:</p>
+						<ul>
+							<li>from/first joint</li>
+							<li>to/second joint</li>
+						</ul>
+						<p>Enter the following values as required, and click <i>Apply</i>:</p>
+						<ul>
+							<li>Repeat count</li>
+							<li>x offset</li>
+							<li>y offset</li>
+							<li>cross-sectional area</li>
+							<li>modulus of elasticity</li>
+							<li>axial rigidity factor</li>
+							<li>material unit-weight</li>
+						</ul>
+						<p>This will create the bar given by the end joints and entered properties, and repeat this bar as many times as is 
+						specified by the repeat count at an interval given by the x and y offset values. New joints will be created and added 
+						as required.</p>
+					</li>
+					<li>
+						<p>Generate with selection</p>
+						<p>Select bars as required</p>
+						<p>Enter the following values and click <i>Apply</i>:</p>
+						<ul>
+							<li>Repeat count</li>
+							<li>x offset</li>
+							<li>y offset</li>
+						</ul>
+						<p>This will repeat the selected bars as many times as is specified by the repeat count at an interval given by the x 
+						and y offset values.</p>
+					</li>
+				</ol>
+				<p><i>Mirror Bars</i></p>
+				<p>The <i>Mirror</i> tab of the <i>Add Bars</i> dialog is similar in all respects to that of the <i>Add Joints</i> dialog</p>
+				<p><i>Link Bars</i></p>
+				<p>The <i>Link</i> tab of the <i>Add Bars</i> dialog allows a series of joints to be linked with bars.</p>
+				<img src="images/fig_22.0.jpeg" alt="fig 22.0" style="width:388px;height:513px;">
+				<p>Select joints as required</p>
+				<p>Enter the following values as required, and click <i>Apply</i>:</p>
+				<ul>
+					<li>cross-sectional area</li>
+					<li>modulus of elasticity</li>
+					<li>axial rigidity factor</li>
+					<li>material unit-weight</li>
+				</ul>
+				<p><u>Edit Bars</u></p>
+				<p>Click the <i>Edit</i> button of the <i>Bars</i> tab to show the <i>Edit Bars</i> dialog.</p>
+				<img src="images/fig_23.0.jpeg" alt="fig 23.0" style="width:394px;height:362px;">
+				<ol type="i">
+					<li>
+						<p>Edit with single bar selection</p>
+						<p>Make selections in the options below, for the bar end joints:</p>
+						<ul>
+							<li>from/first joint</li>
+							<li>to/second joint</li>
+						</ul>
+						<p>Enter the following values as required, and click <i>Apply</i>:</p>
+						<ul>
+							<li>cross-sectional area</li>
+							<li>modulus of elasticity</li>
+							<li>axial rigidity factor</li>
+							<li>material unit-weight</li>
+						</ul>
+						<p>The selected bar will edited as specified above</p>
+					</li>
+					<li>
+						<p>Edit with multiple bars selection</p>
+						<p>Enter the following values as required and click <i>Apply</i>:</p>
+						<ul>
+							<li>cross-sectional area</li>
+							<li>modulus of elasticity</li>
+							<li>axial rigidity factor</li>
+							<li>material unit-weight</li>
+						</ul>
+						<p>The selected bars will be edited as specified above</p>
+					</li>
+				</ol>
+				<p><u>Delete Bars</u></p>
+				<p>Click the <i>Delete</i> button of the <i>Bars</i> tab to show the <i>Delete Bars</i> dialog.</p>
+				<img src="images/fig_24.0.jpeg" alt="fig 24.0" style="width:256px;height:165px;">
+				<p>The selected bars will be removed from the model.</p>
+			</li>
+			<p><u>Rules for Bar Input</u></p>
+			<table>
+				<tr>
+					<th>Command</th>
+					<th>Required Conditions</th>
+				</tr>
+				<tr>
+					<td>Add Bars</td>
+					<td>
+						<ul>
+							<li>No loads input</li>
+							<li>
+								Minimum separation from nearest existing joints
+								<ul>
+									<li>Metric system: 0.3 m</li>
+									<li>Imperial system: 1.0 ft</li>
+								</ul>
+							</li>
+							<li>
+								Maximum separation from furthest existing joints
+								<ul>
+									<li>Metric system: 1414.2 m</li>
+									<li>Imperial system: 4242.6 ft</li>
+								</ul>
+							</li>
+							<li>
+								Bar length limits
+								<ul>
+									<li>Metric system: 0.3 - 30.0 m</li>
+									<li>Imperial system: 1.0 - 100.0 ft</li>
+								</ul>
+							</li>
+							<li>No joint intersection with existing bars</li>
+							<li>No length overlap between any two existing bars</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Edit Bars</td>
+					<td>
+						<ul>
+							<li>No loads input</li>
+							<li>
+								Minimum separation from nearest existing joints
+								<ul>
+									<li>Metric system: 0.3 m</li>
+									<li>Imperial system: 1.0 ft</li>
+								</ul>
+							</li>
+							<li>
+								Maximum separation from furthest existing joints
+								<ul>
+									<li>Metric system: 1414.2 m</li>
+									<li>Imperial system: 4242.6 ft</li>
+								</ul>
+							</li>
+							<li>
+								Bar length limits
+								<ul>
+									<li>Metric system: 0.3 - 30.0 m</li>
+									<li>Imperial system: 1.0 - 100.0 ft</li>
+								</ul>
+							</li>
+							<li>No joint intersection with existing bars</li>
+							<li>No length overlap between any two existing bars</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Delete Bars</td>
+					<td>
+						<ul>
+							<li>No loads input</li>
+							<li>No attached supports</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<p><a href="#top">Back to Top</a></p>
+			<li>
+				<p id="model_input_03"><b>Supports</b></p>
+				<p><u>Add Supports</u></p>
+				<p>Click the <i>Add</i> button of the <i>Supports</i> tab to show the <i>Add Supports</i> dialog.</p>
+				<img src="images/fig_25.0.jpeg" alt="fig 25.0" style="width:332px;height:239px;">
+				<p>Select joints as required</p>
+				<p>Make choices and enter values as required below and click <i>Apply</i></p>
+				<ul>
+					<li>Support joint</li>
+					<li>Support type</li>
+					<li>Support angle</li>
+				</ul>
+				<p>Supports will be added to the selected joints</p>
+				<p>Support types are listed below:</p>
+				<table>
+					<tr>
+						<th><b>Icon</b></th>
+						<th><b>Type name</b></th>
+						<th><b>Angle (<sup>o</sup>)</b></th>
+					</tr>
+					<tr>
+						<td><img src="images/fixed_bottom.png" alt="fixed_bottom" style="width:32px;height:32px;"></td>
+						<td>fixed support</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td><img src="images/fixed_left.png" alt="fixed_left" style="width:32px;height:32px;"></td>
+						<td>fixed support</td>
+						<td>90</td>
+					</tr>
+					<tr>
+						<td><img src="images/fixed_top.png" alt="fixed_top" style="width:32px;height:32px;"></td>
+						<td>fixed support</td>
+						<td>180</td>
+					</tr>
+					<tr>
+						<td><img src="images/fixed_right.png" alt="fixed_right" style="width:32px;height:32px;"></td>
+						<td>fixed support</td>
+						<td>270</td>
+					</tr>
+					<tr>
+						<td><img src="images/roller_inclined.png" alt="roller_inclined" style="width:32px;height:32px;"></td>
+						<td>inclined roller</td>
+						<td>varies: 0 - 360</td>
+					</tr>
+					<tr>
+						<td><img src="images/roller_bottom.png" alt="roller_bottom" style="width:32px;height:32px;"></td>
+						<td>roller</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td><img src="images/roller_left.png" alt="roller_left" style="width:32px;height:32px;"></td>
+						<td>roller</td>
+						<td>90</td>
+					</tr>
+					<tr>
+						<td><img src="images/roller_top.png" alt="roller_top" style="width:32px;height:32px;"></td>
+						<td>roller</td>
+						<td>180</td>
+					</tr>
+					<tr>
+						<td><img src="images/roller_right.png" alt="roller_right" style="width:32px;height:32px;"></td>
+						<td>roller</td>
+						<td>270</td>
+					</tr>
+				</table>
+				<p><u>Edit Supports</u></p>
+				<p>Click the <i>Edit</i> button of the <i>Supports</i> tab to show the <i>Edit Supports</i> dialog.</p>
+				<img src="images/fig_26.0.jpeg" alt="fig 26.0" style="width:356px;height:225px;">
+				<ol type="i">
+					<li>
+						<p>Edit with single support selection</p>
+						<p>Make selections and enter values as required below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Support joint</li>
+							<li>Support type</li>
+							<li>Support angle</li>
+						</ul>
+						<p>The selected support will be edited as specified above</p>
+					</li>
+					<li>
+						<p>Edit with multiple supports selection</p>
+						<p>Make selections and enter values as required below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Support type</li>
+							<li>Support angle</li>
+						</ul>
+						<p>The selected supports will be edited as specified above</p>
+					</li>
+				</ol>
+				<p><u>Delete Supports</u></p>
+				<p>Click the <i>Delete</i> button of the <i>Supports</i> tab to show the <i>Delete Supports</i> dialog.</p>
+				<img src="images/fig_27.0.jpeg" alt="fig 27.0" style="width:280px;height:165px;">
+				<p>The selected supports will be removed from the model</p>
+			</li>
+			<p><u>Rules for Support Input</u></p>
+			<table>
+				<tr>
+					<th>Command</th>
+					<th>Required Conditions</th>
+				</tr>
+				<tr>
+					<td>Add Supports</td>
+					<td>
+						<ul>
+							<li>No loads input</li>
+							<li>No previous support at intended joint</li>
+							<li>One or more bars at intended joint</li>
+							<li>No "roller" type support attached to single bar</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Edit Supports</td>
+					<td>
+						<ul>
+							<li>No loads input</li>
+							<li>One or more bars at intended joint</li>
+							<li>No "roller" type support attached to single bar</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Delete Supports</td>
+					<td>
+						<ul>
+							<li>No loads input</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<p><a href="#top">Back to Top</a></p>
+		</ol>
+		<h2 id="loads_input">Loads Input</h2>
+		<ol>
+			<li>
+				<p id="loads_input_01"><b>Model Checks</b></p>
+				<p>Before loads can be applied to the model, it is checked for validity. If any of the following conditions is true, the model becomes
+				invalid.</p>
+				<ul>
+					<li>Model has less than three joints</li>
+					<li>Model has less than two bars</li>
+					<li>Model has less than two supports</li>
+					<li>Model has disconnected joints and bars</li>
+					<li>Model has joint connected to single bar only</li>
+					<li>Model has all joints fixed</li>
+					<li>Model unstable (external) due to insufficient supports</li>
+					<li>Model unstable (internal) due to insufficient number of bars</li>
+					<li>Model has (at least) one bar with fixed ends</li>
+					<li>Model unstable (internal) due to bars configuration</li>
+				</ul>
+				<p>Any failed condition must be corrected and a check done again to validate the model. Checks can be made by changing to the 
+				<i>Loads</i> or <i>Solution</i> tab or by the menu command <b>Model</b> &#8594; <b>Check Model</b></p>
+			</li>
+			<p><a href="#top">Back to Top</a></p>
+			<li>
+				<p id="loads_input_02"><b>Joint Loads</b></p>
+				<p><u>Add Joint Loads</u></p>
+				<p>In the <i>Loads</i> tab, select <i>Joint Loads</i> from the load display options</p>
+				<p>Click the <i>Add</i> button of the <i>Loads</i> tab to show the <i>Add Joint Loads</i> dialog.</p>
+				<img src="images/fig_28.0.jpeg" alt="fig 28.0" style="width:310px;height:251px;">
+				<ol type="i">
+					<li>
+						<p>Add with no joints selection</p>
+						<p>Make selections and enter values as required below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Load joint</li>
+							<li>Load horizontal component</li>
+							<li>Load vertical component</li>
+							<li>Load position</li>
+						</ul>
+						<p>The joint load specified will be applied at the given joint</p>
+					</li>
+					<li>
+						<p>Add with joints selection</p>
+						<p>Make selections and enter values as required below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Load horizontal component</li>
+							<li>Load vertical component</li>
+							<li>Load position</li>
+						</ul>
+						<p>The joint load specified will be applied at the selected joints</p>
+					</li>
+				</ol>
+				<p>The joint load positions "head" and "tail" are shown below.</p>
+				<img src="images/fig_29.0.jpg" alt="fig 29.0" style="width:126px;height:109px;">
+				<img src="images/fig_30.0.jpg" alt="fig 30.0" style="width:125px;height:102px;">
+				<p><u>Edit Joint Loads</u></p>
+				<p>Click the <i>Edit</i> button of the <i>Loads</i> tab to show the <i>Edit Joint Loads</i> dialog.</p>
+				<img src="images/fig_31.0.jpeg" alt="fig 31.0" style="width:312px;height:251px;">
+				<ol type="i">
+					<li>
+						<p>Edit with single joint load selection</p>
+						<p>Make selections and enter values as required below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Load joint</li>
+							<li>Load horizontal component</li>
+							<li>Load vertical component</li>
+							<li>Load position</li>
+						</ul>
+						<p>The selected joint load will be edited as specified above</p>
+					</li>
+					<li>
+						<p>Edit with multiple joint load selection</p>
+						<p>Make selections and enter values as required below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Load horizontal component</li>
+							<li>Load vertical component</li>
+							<li>Load position</li>
+						</ul>
+						<p>The selected joint loads will be edited as specified above</p>
+					</li>
+				</ol>
+				<p><u>Delete Joint Loads</u></p>
+				<p>Click the <i>Delete</i> button of the <i>Loads</i> tab to show the <i>Delete Joint Loads</i> dialog.</p>
+				<img src="images/fig_32.0.jpeg" alt="fig 32.0" style="width:287px;height:165px;">
+				<p>The selected joint loads will be removed from the model.</p>
+			</li>
+			<p><u>Rules for Joint Load Input</u></p>
+			<table>
+				<tr>
+					<th>Command</th>
+					<th>Required Conditions</th>
+				</tr>
+				<tr>
+					<td>Add Joint loads</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+							<li>No previous joint load at intended joint</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Edit Joint loads</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+							<li>No previous joint load at intended joint</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Delete Joint loads</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<p><a href="#top">Back to Top</a></p>
+			<li>
+				<p id="loads_input_03"><b>Support Settlements</b></p>
+				<p><u>Add Support Settlements</u></p>
+				<p>Select <i>Support Settlements</i> from the load display options</p>
+				<p>Click the <i>Add</i> button of the <i>Loads</i> tab to show the <i>Add Support Settlements</i> dialog.</p>
+				<img src="images/fig_33.0.jpeg" alt="fig 33.0" style="width:340px;height:162px;">
+				<p>Make selections and enter values as required below and click <i>Apply</i>:</p>
+				<ul>
+					<li>Settlement support</li>
+					<li>Settlement value</li>
+				</ul>
+				<p>The settlement will be applied at the support as specified above</p>
+				<p><u>Edit Support Settlements</u></p>
+				<p>Click the <i>Edit</i> button of the <i>Loads</i> tab to show the <i>Edit Support Settlements</i> dialog.</p>
+				<img src="images/fig_34.0.jpeg" alt="fig 34.0" style="width:391px;height:186px;">
+				<ol type="i">
+					<li>
+						<p>Edit with single support settlement selection</p>
+						<p>Make selections and enter values as required below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Settlement support</li>
+							<li>Settlement value</li>
+						</ul>
+						<p>The selected support settlement will be edited as specified above</p>
+					</li>
+					<li>
+						<p>Edit with multiple support settlement selection</p>
+						<p>Enter value as required below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Settlement value</li>
+						</ul>
+						<p>The selected support settlements will be edited as specified above</p>
+					</li>
+				</ol>
+				<p><u>Delete Support Settlements</u></p>
+				<p>Click the <i>Delete</i> button of the <i>Loads</i> tab to show the <i>Delete Support Settlements</i> dialog.</p>
+				<img src="images/fig_35.0.jpeg" alt="fig 35.0" style="width:354px;height:165px;">
+				<p>The selected support settlements will be removed from the model.</p>
+			</li>
+			<p><u>Rules for Support Settlement Input</u></p>
+			<table>
+				<tr>
+					<th>Command</th>
+					<th>Required Conditions</th>
+				</tr>
+				<tr>
+					<td>Add Support settlements</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+							<li>No previous support settlement at intended support</li>
+							<li>Redundant "roller" or "fixed" type support with 0<sup>o</sup> angle</li>
+							<li>"Value" axial rigidity option</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Edit Support settlements</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+							<li>No previous support settlement at intended support</li>
+							<li>Redundant "roller" or "fixed" type support with 0<sup>o</sup> angle</li>
+							<li>"Value" axial rigidity option</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Delete Support settlements</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<p><a href="#top">Back to Top</a></p>
+			<li>
+				<p id="loads_input_04"><b>Thermal Effects</b></p>
+				<p><u>Add Thermal Effects</u></p>
+				<p>Select <i>Thermal Effects</i> from the load display options</p>
+				<p>Click the <i>Add</i> button of the <i>Loads</i> tab to show the <i>Add Thermal Effects</i> dialog.</p>
+				<img src="images/fig_36.0.jpeg" alt="fig 36.0" style="width:304px;height:324px;">
+				<ol type="i">
+					<li>
+						<p>Add with no bars selection</p>
+						<p>Make the entries listed below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Thermal effect bar</li>
+							<li>Temperature change</li>
+							<li>Thermal coefficient</li>
+						</ul>
+						<p>The thermal effect specified will be applied to the given bar</p>
+					</li>
+					<li>
+						<p>Add with bars selection</p>
+						<p>Make the entries listed below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Temperature change</li>
+							<li>Thermal coefficient</li>
+						</ul>
+						<p>The thermal effect specified will be applied to the given bars</p>
+					</li>
+				</ol>
+				<p><u>Edit Thermal Effects</u></p>
+				<p>Click the <i>Edit</i> button of the <i>Loads</i> tab to show the <i>Edit Thermal Effects</i> dialog.</p>
+				<img src="images/fig_37.0.jpeg" alt="fig 37.0" style="width:370px;height:324px;">
+				<ol type="i">
+					<li>
+						<p>Edit with single thermal effect selection</p>
+						<p>Make the entries listed below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Thermal effect bar</li>
+							<li>Temperature change</li>
+							<li>Thermal coefficient</li>
+						</ul>
+						<p>The selected thermal effect will be edited as specified above</p>
+					</li>
+					<li>
+						<p>Edit with multiple thermal effects selection</p>
+						<p>Make the entries listed below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Temperature change</li>
+							<li>Thermal coefficient</li>
+						</ul>
+						<p>The selected thermal effects will be edited as specified above</p>
+					</li>
+				</ol>
+				<p><u>Delete Thermal Effects</u></p>
+				<p>Click the <i>Delete</i> button of the <i>Loads</i> tab to show the <i>Delete Thermal Effects</i> dialog.</p>
+				<img src="images/fig_38.0.jpeg" alt="fig 38.0" style="width:324px;height:167px;">
+				<p>The selected thermal effects will be removed from the model.</p>
+			</li>
+			<p><u>Rules for Thermal Effect Input</u></p>
+			<table>
+				<tr>
+					<th>Command</th>
+					<th>Required Conditions</th>
+				</tr>
+				<tr>
+					<td>Add Thermal effects</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+							<li>No previous thermal effect at intended bar</li>
+							<li>Redundant bar</li>
+							<li>"Value" axial rigidity option</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Edit Thermal effects</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+							<li>No previous thermal effect at intended bar</li>
+							<li>Redundant bar</li>
+							<li>"Value" axial rigidity option</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Delete Thermal effects</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<p><a href="#top">Back to Top</a></p>
+			<li>
+				<p id="loads_input_05"><b>Assembly/Fabrication Errors</b></p>
+				<p><u>Add Assembly/Fabrication Errors</u></p>
+				<p>Select <i>Assembly/Fabrication Errors</i> from the load display options</p>
+				<p>Click the <i>Add</i> button of the <i>Loads</i> tab to show the <i>Add Assembly/Fabrication Errors</i> dialog.</p>
+				<img src="images/fig_39.0.jpeg" alt="fig 39.0" style="width:377px;height:291px;">
+				<ol type="i">
+					<li>
+						<p>Add with no bars selection</p>
+						<p>Make the entries listed below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Fabrication error bar</li>
+							<li>Length Error</li>
+						</ul>
+						<p>The fabrication error specified will be applied to the given bar</p>
+					</li>
+					<li>
+						<p>Add with bars selection</p>
+						<p>Make the entries listed below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Length Error</li>
+						</ul>
+						<p>The fabrication error specified will be applied to the given bars</p>
+					</li>
+				</ol>
+				<p><u>Edit Assembly/Fabrication Errors</u></p>
+				<p>Click the <i>Edit</i> button of the <i>Loads</i> tab to show the <i>Edit Assembly/Fabrication Errors</i> dialog.</p>
+				<img src="images/fig_40.0.jpeg" alt="fig 40.0" style="width:378px;height:291px;">
+				<ol type="i">
+					<li>
+						<p>Edit with single fabrication error selection</p>
+						<p>Make the entries listed below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Fabrication error bar</li>
+							<li>Length Error</li>
+						</ul>
+						<p>The selected fabrication error will be edited as specified above</p>
+					</li>
+					<li>
+						<p>Edit with multiple fabrication error selection</p>
+						<p>Make the entries listed below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Length Error</li>
+						</ul>
+						<p>The selected fabrication errors will be edited as specified above</p>
+					</li>
+				</ol>
+				<p><u>Delete Assembly/Fabrication Errors</u></p>
+				<p>Click the <i>Delete</i> button of the <i>Loads</i> tab to show the <i>Delete Assembly/Fabrication Errors</i> dialog.</p>
+				<img src="images/fig_41.0.jpeg" alt="fig 41.0" style="width:401px;height:167px;">
+				<p>The selected fabrication errors will be removed from the model.</p>
+			</li>
+			<p><u>Rules for Fabrication Error Input</u></p>
+			<table>
+				<tr>
+					<th>Command</th>
+					<th>Required Conditions</th>
+				</tr>
+				<tr>
+					<td>Add Fabrication errors</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+							<li>No previous fabrication error at intended bar</li>
+							<li>Redundant bar</li>
+							<li>"Value" axial rigidity option</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Edit Fabrication errors</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+							<li>No previous fabrication error at intended bar</li>
+							<li>Redundant bar</li>
+							<li>"Value" axial rigidity option</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Delete Fabrication errors</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<p><a href="#top">Back to Top</a></p>
+			<li>
+				<p id="loads_input_06"><b>Influence Loads</b></p>
+				<p><u>Add Influence Loads</u></p>
+				<p>Select <i>Influence Loads</i> from the load display options</p>
+				<p>Click the <i>Add</i> button of the <i>Loads</i> tab to show the <i>Add Influence Loads</i> dialog.</p>
+				<img src="images/fig_42.0.jpeg" alt="fig 42.0" style="width:455px;height:358px;">
+				<p>Make the entries listed below and click <i>Apply</i></p>
+				<ul>
+					<li>Influence load path (Select joints as required)</li>
+					<li>Influence load name</li>
+					<li>Influence load direction</li>
+					<li>Point loads</li>
+				</ul>
+				<p><u>Edit Influence Loads</u></p>
+				<p>Click the <i>Edit</i> button of the <i>Loads</i> tab to show the <i>Edit Influence Loads</i> dialog.</p>
+				<img src="images/fig_43.0.jpeg" alt="fig 43.0" style="width:449px;height:458px;">
+				<ol type="i">
+					<li>
+						<p>Edit with single influence load selection</p>
+						<p>Make the entries listed below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Influence load path (Select joints as required)</li>
+							<li>Influence load name</li>
+							<li>Influence load direction</li>
+							<li>Point loads</li>
+						</ul>
+						<p>The selected influence load will be edited as specified above</p>
+					</li>
+					<li>
+						<p>Edit with multiple influence load selection</p>
+						<p>Make the entries listed below and click <i>Apply</i>:</p>
+						<ul>
+							<li>Influence load direction</li>
+						</ul>
+						<p>The selected influence loads will be edited as specified above</p>
+					</li>
+				</ol>
+				<p><u>Delete Influence Loads</u></p>
+				<p>Click the <i>Delete</i> button of the <i>Loads</i> tab to show the <i>Delete Influence Loads</i> dialog.</p>
+				<img src="images/fig_44.0.jpeg" alt="fig 44.0" style="width:321px;height:167px;">
+				<p>The selected influence loads will be removed from the model.</p>
+			</li>
+			<p><u>Rules for Influence load Input</u></p>
+			<table>
+				<tr>
+					<th>Command</th>
+					<th>Required Conditions</th>
+				</tr>
+				<tr>
+					<td>Add Influence loads</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+							<li>Influence load path on horizontal line must connect all joints on that line</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Edit Influence loads</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+							<li>Influence load path on horizontal line must connect all joints on that line</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>Delete Influence loads</td>
+					<td>
+						<ul>
+							<li>No model solution</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			<p><a href="#top">Back to Top</a></p>
+		</ol>
+		<h2 id="analysis_results">Analysis and Results</h2>
+		<ol>
+			<li>
+				<p id="analysis_results_01"><b>Load Options</b></p>
+				<p>In the <i>solution</i> tab, check the loads to be included in the analysis as required.</p>
+			</li>
+			<li>
+				<p id="analysis_results_02"><b>Analysis</b></p>
+				<p>Click the <i>Solve</i> button to analyze the model</p>
+			</li>
+			<li>
+				<p id="analysis_results_03"><b>Analysis Report</b></p>
+				<p>Click the <i>Report</i> button to generate a report</p>
+				<p>Click the <i>Clear</i> button to discard the current model solution</p>
+			</li>
+		</ol>
+	</body>
+</html>

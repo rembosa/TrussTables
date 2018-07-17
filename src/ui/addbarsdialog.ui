@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddBarsDialog</class>
+ <widget class="QDialog" name="AddBarsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>266</width>
+    <height>377</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add Bars</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="selectedBarsLabel">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Selected Bars</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" rowspan="6">
+    <widget class="QTextEdit" name="selectedBarsTextEdit">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="undoRedoEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="acceptRichText">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" rowspan="6">
+    <widget class="Line" name="verticalLine">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" colspan="2">
+    <widget class="QTabWidget" name="optionTabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="generateTab">
+      <attribute name="title">
+       <string>Generate</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="endJointsGroupBox">
+         <property name="title">
+          <string>End Joints</string>
+         </property>
+         <layout class="QGridLayout" name="endJointsGridLayout" rowstretch="0,0" columnstretch="0,1">
+          <item row="0" column="0">
+           <widget class="QLabel" name="fromJointLabel">
+            <property name="text">
+             <string>From</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="ComboBox" name="fromJointComboBox"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="toJointLabel">
+            <property name="text">
+             <string>To</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="ComboBox" name="toJointComboBox"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <layout class="QFormLayout" name="generateFormLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="repeatLabel">
+           <property name="text">
+            <string>Repeat</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="repeatSpinBox"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="addBarsDeltaXLabel">
+           <property name="text">
+            <string>deltaX</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QDoubleSpinBox" name="addBarsDeltaXDoubleSpinBox">
+           <property name="decimals">
+            <number>3</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="addBarsDeltaYLabel">
+           <property name="text">
+            <string>deltaY</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QDoubleSpinBox" name="addBarsDeltaYDoubleSpinBox">
+           <property name="decimals">
+            <number>3</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="mirrorTab">
+      <attribute name="title">
+       <string>Mirror</string>
+      </attribute>
+      <layout class="QFormLayout" name="mirrorFormLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="mirrorAxisLabel">
+         <property name="text">
+          <string>Axis</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="ComboBox" name="mirrorAxisComboBox"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="mirrorJointLabel">
+         <property name="text">
+          <string>Joint</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="ComboBox" name="mirrorJointComboBox"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="linkTab">
+      <attribute name="title">
+       <string>Link</string>
+      </attribute>
+      <layout class="QGridLayout" name="linkGridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="selectedJointsLabel">
+         <property name="text">
+          <string>Selected Joints</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QTextEdit" name="selectedJointsTextEdit">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLabel" name="areaLabel">
+     <property name="text">
+      <string>Area of section</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QDoubleSpinBox" name="areaDoubleSpinBox">
+     <property name="decimals">
+      <number>3</number>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLabel" name="modulusLabel">
+     <property name="text">
+      <string>Modulus of elasticity</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QDoubleSpinBox" name="modulusDoubleSpinBox">
+     <property name="decimals">
+      <number>3</number>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QLabel" name="factorLabel">
+     <property name="text">
+      <string>Factor</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="3">
+    <widget class="QDoubleSpinBox" name="factorDoubleSpinBox">
+     <property name="decimals">
+      <number>3</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLabel" name="unitWeightLabel">
+     <property name="text">
+      <string>Unit weight</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="3">
+    <widget class="QDoubleSpinBox" name="unitWeightDoubleSpinBox">
+     <property name="decimals">
+      <number>3</number>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2" colspan="2">
+    <layout class="QHBoxLayout" name="bottomHorizontalLayout">
+     <item>
+      <spacer name="bottomHorizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="addBarsPushButton">
+       <property name="text">
+        <string>Apply</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../rsc.qrc">
+         <normaloff>:/icons/dialog-ok-apply.png</normaloff>:/icons/dialog-ok-apply.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ComboBox</class>
+   <extends>QComboBox</extends>
+   <header>combobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../rsc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

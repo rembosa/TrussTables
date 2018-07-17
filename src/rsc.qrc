@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/application-exit.png</file>
+        <file>icons/application-vnd.oasis.opendocument.text.png</file>
+        <file>icons/dialog-close.png</file>
+        <file>icons/dialog-information.png</file>
+        <file>icons/dialog-ok-apply.png</file>
+        <file>icons/document-edit.png</file>
+        <file>icons/document-new.png</file>
+        <file>icons/document-open.png</file>
+        <file>icons/document-open-recent.png</file>
+        <file>icons/document-save-as.png</file>
+        <file>icons/document-save.png</file>
+        <file>icons/edit-clear.png</file>
+        <file>icons/fileslist.txt</file>
+        <file>icons/fixed_bottom.png</file>
+        <file>icons/fixed_left.png</file>
+        <file>icons/fixed_right.png</file>
+        <file>icons/fixed_top.png</file>
+        <file>icons/games-solve.png</file>  
+        <file>icons/help-browser.png</file>
+        <file>icons/list-add.png</file>
+        <file>icons/list-remove.png</file>
+        <file>icons/measure.png</file>
+        <file>icons/qtlogo.png</file>
+        <file>icons/quickopen.png</file>
+        <file>icons/roller_bottom.png</file>
+        <file>icons/roller_inclined.png</file>
+        <file>icons/roller_left.png</file>
+        <file>icons/roller_right.png</file>
+        <file>icons/roller_top.png</file>
+        <file>icons/trash-empty.png</file>
+        <file>icons/tt.ico</file>
+        <file>icons/tt.png</file>
+    </qresource>
+</RCC>
