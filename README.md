@@ -24,7 +24,7 @@ Model analysis may include the following options:
 
 ## Installing
 
-Binaries are provided for Linux ([AppImage](https://en.wikipedia.org/wiki/AppImage "AppImage")) and Windows, see (link to releases)
+Binaries are provided for Linux ([AppImage](https://en.wikipedia.org/wiki/AppImage "AppImage")) and Windows, see [releases](https://github.com/rembosa/TrussTables/releases "releases").
 
 **Note:**
 Linux AppImage executables are built on, tested and target, Linux mint 18.2 LTS and Ubuntu 16.04 LTS.
